@@ -4,7 +4,7 @@ using namespace std;
 int arr[20];                        // Membuat Array dengan panjang data 20
 int n;                              // Membuat variabel inputan n
 
-void input() {                      // Produce Input
+void input() {                      // Procedure Input
     while (true)
     {
         cout << "Masukkan Jumlah Data pada Array : ";       // Membuat Inputan jumlah element Array
@@ -31,7 +31,7 @@ void input() {                      // Produce Input
     }
 }
 
-void insertionsort() {              // Produce Insertionsort
+void insertionsort() {              // Procedure Insertionsort
 
     int temp;                       // Membuat variabel data temporer atau penyimpanan sementara
     int i, j;                       // Membuat variabel j sebagai penanda
@@ -57,6 +57,27 @@ void insertionsort() {              // Produce Insertionsort
             cout << arr[k] << " ";          // Output ke layar
         }
     }
+}
+
+
+void display() {                // Procedure Display
+    cout << endl;               // Output baris kosong
+    cout << "\n==================================" << endl;        // Output ke layar
+    cout << "Element Array yang telah tersusun" << endl;          // Output ke layar
+    cout << "==================================" << endl;        // Output ke layar
+
+    for (int j = 0; j < n; j++) {                   // Looping dengan j dimulai dari 0 hingga n-1
+        cout << arr[j] << endl;                     // Output ke layar
+    }
+    cout << endl;                                   // Output baris kosong
+
+}
+
+int main()
+{
+    input();            // Memanggil input
+    insertionsort();    // Memanggil insertionsort
+    display();          // Memanggil display
 }
 
 
